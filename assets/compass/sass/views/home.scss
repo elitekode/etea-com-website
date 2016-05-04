@@ -11,7 +11,7 @@ html, body{
 }
 
 .navigation-bar{
-	height: 100px;
+	height: 80px;
 	background-color: $green;
 	position: fixed;
 	top: 0;
@@ -24,11 +24,11 @@ html, body{
 		width: 50%;
 		img.wide{
 			margin-left: 70px;
-			margin-top: -30px;
+			margin-top: 0px;
 		}
 		img.narrow{
 			margin-left: 60px;
-			margin-top: 20px;
+			margin-top: 0px;
 			display: none;
 			width:150%;
 		}
