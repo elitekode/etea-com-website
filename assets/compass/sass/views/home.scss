@@ -1,0 +1,475 @@
+body{
+	position: relative;
+	min-height: 100vh;
+}
+
+html, body{
+	overflow-x: hidden;
+	font-family:'Raleway', sans-serif;
+	font-weight: 300;
+
+}
+
+.navigation-bar{
+	height: 130px;
+	background-color: $green;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	font-family:'Raleway', sans-serif;
+	font-weight: 300;
+	.navigation-bar-left{
+		float: left;
+		width: 50%;
+		img.wide{
+			margin-left: 70px;
+			margin-top: -30px;
+		}
+		img.narrow{
+			margin-left: 60px;
+			margin-top: 20px;
+			display: none;
+			width:150%;
+		}
+	}
+	.navigation-bar-right{
+		float: left;
+		width: 50%;
+		text-align: right;
+		a{
+			text-decoration: none;
+			color: white;
+		}
+		.btn-white{
+			background-color:white;
+			color: #333;
+			text-transform: uppercase;
+			width: 100px;
+		}
+		.btn-green{
+			background-color: $green;
+			color: white;
+			text-transform: uppercase;
+			margin-right: 20px;
+			width: 100px;
+		}
+		.btn-danger{
+			background-color: white;
+			border: 0px;
+			width: 100px;
+			color: #333;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			margin-top: 0px;
+		}
+		button{
+			margin-top: 20px;
+			margin-right: 60px;
+			height: 40px;
+			width: 100px;
+		}
+		button.need-account{
+			margin-top: 0px;
+			background-color:white;
+			color: #333;
+			text-transform: uppercase;
+			width: 100px;
+		}
+		p{
+			margin-top: 30px;
+			color: white;
+			margin-right: 20px;
+			display: inline-block;
+		}
+		a{
+			color: white;
+		}
+
+	}
+
+}
+
+.navigation-bar-small{
+	font-family:'Raleway', sans-serif;
+	font-weight: 300;
+	margin-top: 80px;
+	clear: all;
+	height: 36px;
+	background-color: #737373;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	// border-top: 2px solid #b3b3b3;
+	// border-bottom: 2px solid #b3b3b3;
+	padding-left: 10%;
+	padding-right: 10%;
+	.icon-holder{
+		background-color: #737373;
+		margin-top: 2px;
+		height: 32px;
+		border-radius: 4px;
+		padding-left: 10%;
+		.one{
+			text-align: center;
+			background: url('../images/menu-steps.png') no-repeat;
+			background-size: 35px, auto;
+			height: 30px;
+			float: left;
+			width: 5%;	
+			background-position: 0px 0px;
+		}
+		.icons{
+			float: left;
+			color: #b3b3b3;
+			line-height: 32px;
+			height: 32px;
+			width: 20%;
+			text-align: left;
+			text-transform: uppercase;
+		}
+		.icons.active{
+			color: white;
+		}
+		.icons:hover{
+			color: white;
+		}
+		.one.active{
+			background: url('../images/menu-steps-active.png') no-repeat;
+			text-align: center;
+			background-size: 35px, auto;
+			height: 30px;
+			float: left;
+			width: 5%;	
+			background-position: 0px 0px;
+		}
+		.two{
+			text-align: center;
+			background: url('../images/menu-steps.png') no-repeat;
+			background-size: 35px, auto;
+			height: 30px;
+			float: left;
+			width: 5%;	
+			background-position: 0px -30px;
+		}
+		.two.active{
+			background: url('../images/menu-steps-active.png') no-repeat;
+			text-align: center;
+			background-size: 35px, auto;
+			height: 30px;
+			float: left;
+			width: 5%;	
+			background-position: 0px -30px;
+		}
+
+		
+		.three{
+			text-align: center;
+			background: url('../images/menu-steps.png') no-repeat;
+			background-size: 35px, auto;
+			height: 30px;
+			float: left;
+			width: 5%;	
+			background-position: 0px -60px;
+		}
+
+		.three.active{
+			text-align: center;
+			background: url('../images/menu-steps-active.png') no-repeat;
+			background-size: 35px, auto;
+			height: 30px;
+			float: left;
+			width: 5%;	
+			background-position: 0px -60px;
+		}
+
+		.four{
+			text-align: center;
+			background: url('../images/menu-steps.png') no-repeat;
+			background-size: 35px, auto;
+			height: 30px;
+			float: left;
+			width: 5%;	
+			background-position: 0px -90px;
+		}
+
+		.four.active{
+			text-align: center;
+			background: url('../images/menu-steps-active.png') no-repeat;
+			background-size: 35px, auto;
+			height: 30px;
+			float: left;
+			width: 5%;	
+			background-position: 0px -90px;
+		}
+	}
+
+}
+
+.coffee-cup-background{
+	font-family:'Raleway', sans-serif;
+	font-weight: 300;
+	height: 400px;
+	// background-image: url('../images/CupInBeans.jpg');
+	background-image: url('../images/coffee.jpg');
+	background-position: 0px -250px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+	margin-top: 80px;
+	width: 100%;
+	.coffee-cup-text{
+		padding-top: 80px;
+		padding-left: 75px;
+		h1{
+			font-size: 50px;
+		}
+	}
+}
+
+.coffee-cup-background2{
+	font-family:'Raleway', sans-serif;
+	font-weight: 300;
+	height: 400px;
+	// background-image: url('../images/CupInBeans.jpg');
+	background-image: url('../images/coffee.jpg');
+	background-position: 0px -250px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+	margin-top: 0px;
+	width: 100%;
+	.coffee-cup-text{
+		padding-top: 80px;
+		padding-left: 75px;
+		h1{
+			font-size:50px;
+			font-weight: 300;
+		}
+	}
+}
+
+.how-it-works{
+	font-family:'Raleway', sans-serif;
+	font-weight: 300;
+	width: 100%;
+	background-color: $cream;
+	height: 100px;
+	line-height: 100px;
+	font-size: 35px;
+	color: $green_lt;
+	text-align: center;
+}
+
+.arrow-holder{
+	position: relative;
+	width: 100%;
+	.arrow-down{
+		width: 0;
+		height: 0;
+		border-left: 30px solid transparent;
+		border-right: 30px solid transparent;
+		border-top: 40px solid $cream;
+		position: absolute;
+		margin-left: 50%;
+		left: -30px;
+		top: 0px;
+	}
+}
+
+
+
+.coffee-bags{
+	font-family:'Raleway', sans-serif;
+	font-weight: 300;
+	width: 100%;
+	height: 400px;
+	background-image: url('../images/CoffeeBags.jpg');
+	background-size: cover;
+	.title{
+		padding-top: 75px;
+		font-size: 40px;
+		color: white;
+		padding-left: 75px;
+	}
+	p{
+		color: white;
+		padding-left: 120px;
+	}
+}
+
+
+.how-it-works2{
+	font-family:'Raleway', sans-serif;
+	font-weight: 300;
+	width: 100%;
+	height: 400px;
+	background-color: $cream;
+	.bag-arrow{
+		text-align: center;
+	}
+	.rotated-picture{
+		margin-left: 50px;
+		padding-top: 25px;
+		transform: rotate(-10deg);
+		float: left;
+		img{
+			height: 250px;
+			border: 10px solid white;
+		}
+	}
+	.coffee-grower{
+		float: left;
+		padding-top: 25px;
+		margin-left: 5%;
+		color: $brown_dk;
+		p.title{
+			font-size: 40px;
+		}
+		p.text{
+			padding-left: 50px;
+		}
+	}
+	
+}
+
+.how-it-works3{
+	font-family:'Raleway', sans-serif;
+	font-weight: 300;
+	width: 100%;
+	clear: both;
+	height: 400px;
+	background-color: black;
+	padding-left: 75px;
+	.coffee-cup{
+		float: left;
+		width: 50%;
+		padding-top: 75px;
+		color: white;
+		p.title{
+			font-size: 40px;
+		}
+		p.text{
+			padding-left: 50px;
+		}
+	}
+	.coffee-cup-image{
+		float: left;
+		width: 50%;
+	}
+
+}
+
+
+.arrow-holder2{
+	width: 100%;
+	position: relative;
+	.arrow-down2{
+		width: 0;
+		height: 0;
+		border-left: 30px solid transparent;
+		border-right: 30px solid transparent;
+		border-top: 40px solid black;
+		position: absolute;
+		margin-left: 50%;
+		left: -30px;
+		top: 0px;
+	}
+}
+
+.get-started-section{
+	font-family:'Raleway', sans-serif;
+	font-weight: 300;
+	width: 100%;
+	background-color: $cream;
+	text-align: center;
+	margin-bottom: 50px;
+	button.get-started{
+		background-color: $green;
+		height: 60px;
+		width: 200px;
+		margin-top:50px;
+		color: white;
+		font-size: 20px;
+		border: 0px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		border-radius: 4px;
+	}
+}
+
+.learn-more{
+	margin-bottom: 50px;
+	text-align: center;
+		h3{
+			margin-top: 10px;
+			margin-bottom: 50px;
+		}
+		button{
+			height: 60px;
+			background-color: white;
+			color: #333;
+			border: 0px;
+			width: 200px;
+			font-size: 20px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			border-radius: 4px;
+		}
+}
+
+@media screen and (max-width: 1100px){
+	.coffee-cup-background2, .coffee-cup-background{
+		background-position: 0px -100px;
+	}
+}
+
+@media screen and (max-width: 645px){
+	.navigation-bar{
+		.navigation-bar-left{
+			width: 25%;
+			img{
+				margin-left: 20px;
+			}
+		}
+		.navigation-bar-right{
+			width: 75%;
+			button{
+				margin-right: 20px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 865px){
+	.navigation-bar{
+		.navigation-bar-left{
+			width: 25%;
+			img.wide{
+				display: none;
+			}
+			img.narrow{
+				display: inline;
+			}
+		}
+		.navigation-bar-right{
+			width: 75%;
+		}
+	}
+	.navigation-bar-small{
+		padding-left: 0%;
+		padding-right: 0%;
+	}
+	.coffee-cup-background2, .coffee-cup-background{
+		background-position: 0px -25px;
+	}
+	.how-it-works2 .rotated-picture{
+		img{
+			height: 150px;
+			margin-top: 50px;
+		}
+	}
+}
+
+
+
+

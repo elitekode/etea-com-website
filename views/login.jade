@@ -1,0 +1,37 @@
+extends layout
+
+block content
+    .navigation-bar
+        .navigation-bar-left
+            a(href='/')
+                img.wide(src='./images/coolbeansLogo.png')
+            a(href='/')
+                img.narrow(src='./images/coffeeLogoStacked.png')
+        .navigation-bar-right
+            if (!user)
+                //- a(href="/login")
+                //-     button.btn.btn-success(type="submit") Login
+                p
+                    a(href="/register") Need an account?
+                a(href="/register")  
+                    button.btn.need-account(type="submit") Register
+            if (user)
+                p Welcome, 
+                    a(href="/account") #{user.username}! &nbsp
+                        span.glyphicon.glyphicon-edit(ariahidden="true")
+                a(href="/logout") 
+                    button.btn.btn-danger(type="submit") Logout
+    .login-wrapper
+        .container
+            h1 Login
+            p.lead Please enter your username and password below.
+            |#{failed}
+            br
+            form(role='form', action='/login', method='post')
+                .form-group
+                    input.form-control(type="text", name="username", placeholder="Enter Your Username")
+                .form-group
+                    input.form-control(type="password", name="password", placeholder="Enter Your Password")
+                button.btn.btn-register(type='submit') Log In
+                a(href='/')
+                    button.btn.btn-cancel(type="button") nevermind

@@ -1,0 +1,40 @@
+#cancellation{
+	width: 60%;
+	margin: auto;
+	position: relative;
+	padding-bottom: 186px;
+	#cancellation-wrapper{
+		margin-bottom: 50px;
+		margin-top: 100px;
+		text-align: center;
+		#cancellation-header{
+			margin: 40px 0 10px 0;
+			font-size: 32px;
+			text-align: center;
+		}
+	}
+}
+
+.footer-wrapper2{
+	background-color: #bfbfbf;
+	text-align: center;
+	padding-bottom: 20px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	img{
+		max-width: 100%;
+		margin-top: 25px;
+	}
+	.horizontal-rule{
+		margin: 15px 0px 15px 35%;
+		height: 1px;
+		// background-color: $brown-md;
+		background-color: white;
+		width: 30%;
+	}
+	p{
+		color: $cream;
+	}
+	
+}

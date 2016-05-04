@@ -1,0 +1,76 @@
+#shipping{
+	margin-bottom: 186px;
+	#shipping-wrapper{
+		margin-top: 50px;
+		#shipping-header{
+			margin: 0 0 8px;
+			font-size: 32px;
+			line-height: 1.2;
+			text-align: left;
+		}
+		#shipping-sub-header{
+			margin: 0;
+			font-size: 20px;
+			font-weight: 300;
+			line-height: 1.4;
+			text-align: left;
+		}
+	}
+}
+
+.shipping-block{
+	border: 1px solid darken($cream, 10%);
+	border-radius: 5px;
+	margin: 30px auto;
+	padding: 30px;
+}
+
+.button-holder{
+	clear: all;
+	text-align: left;
+}
+
+h3.warning{
+	text-align: center;
+	color: red;
+}
+
+.footer-wrapper2{
+	background-color: #bfbfbf;
+	text-align: center;
+	padding-bottom: 20px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	img{
+		max-width: 100%;
+		margin-top: 25px;
+	}
+	.horizontal-rule{
+		margin: 15px 0px 15px 35%;
+		height: 1px;
+		// background-color: $brown-md;
+		background-color: white;
+		width: 30%;
+	}
+	p{
+		color: $cream;
+	}
+	
+}
+
+@media screen and (max-width: 1000px){
+	#shipping-wrapper{
+		form{
+			width: 80%;
+			margin: auto;
+			.form-group input{
+				height: 60px;	
+			}
+			.btn-submit{
+				width: 200px;
+				height: 80px;
+			}
+		}
+	}
+}

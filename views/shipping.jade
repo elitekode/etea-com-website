@@ -1,0 +1,129 @@
+extends layout
+
+block content
+ include datepicker.html
+ .navigation-bar
+    .navigation-bar-left
+            a(href='/')
+                img.wide(src='./images/coolbeansLogo.png')
+            a(href='/')
+                img.narrow(src='./images/coffeeLogoStacked.png')
+    .navigation-bar-right
+        if (!username)
+            a(href="/login")
+                button.btn.btn-success(type="submit") Login
+            a(href="/register")    
+                button.btn.btn-primary(type="submit") Register
+        if (username)
+            p Welcome back, 
+                a(href="/account") #{username}! &nbsp
+                    span.glyphicon.glyphicon-edit(ariahidden="true")
+            a(href="/logout") 
+                button.btn.btn-danger(type="submit") Logout
+  .navigation-bar-small
+        .icon-holder
+            a(href="/")
+                .one
+                .icons 1. Home
+            a(href="/choices")
+                .two
+                .icons 2. Options
+            a(href="/shipping")
+                .three.active
+                .icons.active 3. Delivery
+            a(href="/payment")
+                .four
+                .icons 4. Payment
+
+ #shipping.container
+    #shipping-wrapper.col-xs-12
+        #shipping-header Please enter your shipping info
+        #shipping-sub-header We treat your coffee like gold.  Like black gold (not Texas tea). It will be shipped safely and is guaranteed.
+        if(shipping)
+            h3.warning Sorry.  Unfortunately you need to fill out all of the necessary shipping data before you can go to the payments page. You don't want your coffee being shipped to some tea drinker's home do you?
+          .row
+            form.col-sm-8(name="shipping-form", action="/shipping", method="post")
+                .shipping-block.col-sm-12
+                    h2.shipping-label Address        
+                    .form-group
+                        label(for="fullName") Full Name
+                        input.form-control(type="text", id="fullName", name="fullName", placeholder="John Doe", value=(fullName), required)
+                    .form-group
+                        label(for="address1") Address Line 1
+                        input.form-control(type="text", id="address1", name="address1", placeholder="100 Main Street", value=(address1), required)
+                        p.help-block Street address, P.O. Box, company name, c/o
+                    .form-group
+                        label(for="address2") Address Line 2
+                        input.form-control(type="text", id="address2", name="address2", placeholder="Apt. 100", value=(address2))
+                        p.help-block Apartment, suite, unit, building, floor, etc.
+                    .form-group
+                        label(for="city") City
+                        input.form-control(type="text", id="city" name="city", placeholder="YourCity", value=(city), required)
+                        p.help-block City, town, etc.
+                    label(for="state") State
+                    .form-group               
+                        select.form-control(id="state", name="state", style="width:100px")
+                            option(value='AL' selected=(state=='AL')) Alabama
+                            option(value='AK' selected=(state=='AK')) Alaska
+                            option(value='AZ' selected=(state=='AZ')) Arizona
+                            option(value='AR' selected=(state=='AR')) Arkansas
+                            option(value='CA' selected=(state=='CA')) California
+                            option(value='CO' selected=(state=='CO')) Colorado
+                            option(value='CT' selected=(state=='CT')) Connecticut
+                            option(value='DE' selected=(state=='DE')) Delaware
+                            option(value='DC' selected=(state=='DC')) District Of Columbia
+                            option(value='FL' selected=(state=='FL')) Florida
+                            option(value='GA' selected=(state=='GA')) Georgia
+                            option(value='HI' selected=(state=='HI')) Hawaii
+                            option(value='ID' selected=(state=='ID')) Idaho
+                            option(value='IL' selected=(state=='IL')) Illinois
+                            option(value='IN' selected=(state=='IN')) Indiana
+                            option(value='IA' selected=(state=='IA')) Iowa
+                            option(value='KS' selected=(state=='KS')) Kansas
+                            option(value='KY' selected=(state=='KY')) Kentucky
+                            option(value='LA' selected=(state=='LA')) Louisiana
+                            option(value='ME' selected=(state=='ME')) Maine
+                            option(value='MD' selected=(state=='MD')) Maryland
+                            option(value='MA' selected=(state=='MA')) Massachusetts
+                            option(value='MI' selected=(state=='MI')) Michigan
+                            option(value='MN' selected=(state=='MN')) Minnesota
+                            option(value='MS' selected=(state=='MS')) Mississippi
+                            option(value='MO' selected=(state=='MO')) Missouri
+                            option(value='MT' selected=(state=='MT')) Montana
+                            option(value='NE' selected=(state=='NE')) Nebraska
+                            option(value='NV' selected=(state=='NV')) Nevada
+                            option(value='NH' selected=(state=='NH')) New Hampshire
+                            option(value='NJ' selected=(state=='NJ')) New Jersey
+                            option(value='NM' selected=(state=='NM')) New Mexico
+                            option(value='NY' selected=(state=='NY')) New York
+                            option(value='NC' selected=(state=='NC')) North Carolina
+                            option(value='ND' selected=(state=='ND')) North Dakota
+                            option(value='OH' selected=(state=='OH')) Ohio
+                            option(value='OK' selected=(state=='OK')) Oklahoma
+                            option(value='OR' selected=(state=='OR')) Oregon
+                            option(value='PA' selected=(state=='PA')) Pennsylvania
+                            option(value='RI' selected=(state=='RI')) Rhode Island
+                            option(value='SC' selected=(state=='SC')) South Carolina
+                            option(value='SD' selected=(state=='SD')) South Dakota
+                            option(value='TN' selected=(state=='TN')) Tennessee
+                            option(value='TX' selected=(state=='TX')) Texas
+                            option(value='UT' selected=(state=='UT')) Utah
+                            option(value='VT' selected=(state=='VT')) Vermont
+                            option(value='VA' selected=(state=='VA')) Virginia
+                            option(value='WA' selected=(state=='WA')) Washington
+                            option(value='WV' selected=(state=='WV')) West Virginia
+                            option(value='WI' selected=(state=='WI')) Wisconsin
+                            option(value='WY' selected=(state=='WY')) Wyoming
+                    .form-group
+                        label  Zip Code
+                        input.form-control(type="text", id="zipCode" name="zipCode", placeholder="Zip Code", style="width:100px", value=(zipCode), minlength=5, required)
+                    .form-group
+                        label Delivery Date
+                        input.form-control(type="text", id="datepicker", name="deliveryDate", placeholder="", style="width:100px", value=(deliveryDate))
+                        input(type="hidden", name="shipping", value="completed")
+                .button-holder
+                    button.btn.btn-submit(type="submit", name="submit") Submit
+ .footer-wrapper2
+    img.narrow(src="../images/logo1.png")
+    .horizontal-rule
+    p &copy2016 Kochan Desai

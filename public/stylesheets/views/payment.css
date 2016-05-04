@@ -1,0 +1,5 @@
+
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$cream\".\A         on line 97 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/payment.scss\A \A 92: 		// background-color: $brown-md;\A 93: 		background-color: white;\A 94: 		width: 30%;\A 95: 	}\A 96: 	p{\A 97: 		color: $cream;\A 98: 	}\A 99: 	\A 100: }"; }

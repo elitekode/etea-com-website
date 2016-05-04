@@ -1,0 +1,109 @@
+#account.container{
+	position: relative;
+	margin-bottom: 186px;
+}
+
+#account{
+	margin-bottom: 50px;
+	#account-wrapper{
+		margin-top: 50px;
+		#account-header{
+			margin: 0 0 8px;
+			font-size: 32px;
+			line-height: 1.2;
+			text-align: left;
+		}
+	}
+}
+
+.account-block{
+	border: 1px solid darken($cream, 10%);
+	border-radius: 5px;
+	margin: 30px auto;
+	padding: 30px;
+	h2.account-label{
+		float: left;
+	}
+	p.edit{
+		float: left;
+		margin-top: 30px;
+		margin-left: 15px;
+	}
+	.choices-holder{
+		clear: both;
+		width: 75%;
+		float: left;
+	}
+	.data-holder{
+		width: 25%;
+		float: left;
+		p.margin{
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.button-holder{
+	text-align: center;
+	button.btn.btn-info{
+		margin-top: 20px;
+		width: 200px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		height: 40px;
+	}
+	#myModal{
+		.modal-dialog{
+			width: 30%;
+			.modal-content{
+				background-color: $cream;
+			}
+			.modal-footer{
+				text-align: left;
+			}
+		}
+	}
+}
+
+.footer-wrapper2{
+	background-color: #bfbfbf;
+	text-align: center;
+	padding-bottom: 20px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	img{
+		max-width: 100%;
+		margin-top: 25px;
+	}
+	.horizontal-rule{
+		margin: 15px 0px 15px 35%;
+		height: 1px;
+		// background-color: $brown-md;
+		background-color: white;
+		width: 30%;
+	}
+	p{
+		color: $cream;
+	}
+	
+}
+
+@media screen and (max-width: 1000px){
+	.button-holder{
+		#myModal .modal-dialog{
+			width: 50%;
+		}
+	}
+}
+
+@media screen and (max-width: 770px){
+	.button-holder{
+		#myModal .modal-dialog{
+			margin-left: 20%;
+			margin-top: 20%;
+			width: 60%;
+		}
+	}
+}
+

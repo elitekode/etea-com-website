@@ -1,0 +1,87 @@
+extends layout
+block content
+    .navigation-bar
+        .navigation-bar-left
+            a(href='/')
+                img.wide(src='./images/logo1.png')
+            a(href='/')
+                img.narrow(src='./images/logo1.png')
+        .navigation-bar-right
+            if (!username)
+                a(href="/login") 
+                    button.btn.btn-green(type="submit") log in
+                a(href="/register")
+                    button.btn.btn-white(type="submit") sign up
+            if (username)
+                p Welcome back, 
+                    a(href="/account") #{username}! &nbsp 
+                        span.glyphicon.glyphicon-edit(ariahidden="true")
+                a(href="/logout") 
+                    button.btn.btn-danger(type="submit") Logout
+    if (username)
+        .navigation-bar-small
+            .icon-holder
+                a(href="/")
+                    .one.active
+                    .icons.active 1. Home
+                a(href="/choices")
+                    .two
+                    .icons 2. Options
+                a(href="/shipping")
+                    .three
+                    .icons 3. Delivery
+                a(href="/payment")
+                    .four
+                    .icons 4. Payment
+    if (username)
+        .coffee-cup-background2
+            .coffee-cup-text
+              h1 A better way to get Tea
+              h4 Whether its, Green or Black, 
+              h4 Rare and Artisan Teas will be delivered
+              h4 weekly to your door.
+    else
+        .coffee-cup-background
+            .coffee-cup-text
+               h1 A better way to sip
+               h4 Original Tea
+               h4 Research Graded and Delivered to Your Door
+    .how-it-works 
+        p How It Works
+    .arrow-holder
+        .arrow-down
+    .coffee-bags
+        p.title 1. Each year, we look for rare and unusual, single-origin teas that are not commonly found outside China and increasingly, are becoming harder to find within that marketplace.
+        p Each leaf is from a single-origin teas 
+        p Each tea is not commonly found outside of China
+        p We ensure our product is sourced 
+    .how-it-works2
+        .bag-arrow
+            img(src="../images/CoffeeBags_corner.png")
+        .rotated-picture
+            img(src="../images/grower.jpg")
+        .coffee-grower
+            p.title 2. We pick up the tea
+            p.text We place the tea in silk bags
+            p.text Each bag is transported in climate-controlled trucks
+            p.text Every six hours the bags are rotated for uniformity
+    .arrow-holder
+        .arrow-down
+    .how-it-works3
+        .coffee-cup
+            p.title 3. You drink the tea
+            p.text The tea hits your lips
+            p.text You swallow the coffee
+            p.text You want to buy more of the coffee
+        .coffee-cup-image
+            img(src="../images/cupSteam.jpg")
+    .arrow-holder2
+        .arrow-down2
+    .get-started-section
+        a(href="/register") 
+            button.get-started(type="button") Get Started
+    .learn-more
+        h3 Want to know more about us?
+        a(href="/ourhistory")
+            button.ourhistory Our Story
+    extends footer

@@ -1,0 +1,91 @@
+body{
+	background-color: $cream
+}
+
+button.btn.btn-submit{
+		background-color:$green;
+		width: 200px;
+		color: white;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		height: 40px;
+		margin-top: 20px;
+	}
+
+#plan-wrapper{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	#choices-header{
+		margin: 0 0 8px;
+		line-height: 1.2;
+		text-align: center;
+	}
+	#choices-sub-header{
+		margin: 0;
+		font-size: 20px;
+		font-weight: 300;
+		line-height: 1.4;
+		text-align: center;
+	}
+	.options-holder{
+		margin-top: 20px;
+		padding: 30px;
+		.options{
+			padding: 20px;
+			border-radius: 4px;
+			background-color: white;
+			h1, p.center-text{
+				text-align: center;	
+			}
+			img{
+				max-width: 100%;
+			}
+			.summary{
+				margin-top: 20px;
+				font-size: 20px;
+				font-weight: 500;
+				.align-right{
+					text-align: right;
+				}
+			}
+		}
+	}
+	.center-text{
+		text-align: center;
+	}
+	p.center-text.spacer{
+		padding-bottom: 20px;
+		font-size: 20px;
+	}
+	.choices-image{
+		text-align: center;
+		img{
+			max-width: 100%;
+		}
+	}
+	.choices-block{
+		border: 1px solid darken($cream, 10%);
+		border-radius: 5px;
+		margin: 30px auto;
+		padding: 30px;
+	}
+	.button-holder{
+		text-align: center;	
+		margin-bottom: 20px;
+	}
+	.width{
+		width: 50%;
+	}
+	.choices-lower-text, .choices-help-text{
+		margin: 10px 0 10px;
+	}
+	h3.warning{
+		text-align: center;
+		color: red;
+	}
+	h2{
+		margin-top: 80px;
+		text-transform: uppercase;
+	}
+}
+

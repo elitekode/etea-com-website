@@ -1,0 +1,100 @@
+#payment{
+	margin-bottom: 186px;
+	min-height: 100%;
+	#payment-wrapper{
+		margin-top: 50px;
+		#payment-header{
+			margin: 0 0 8px;
+			font-size: 32px;
+			line-height: 1.2;
+			text-align: left;
+		}
+		#payment-sub-header{
+			margin: 0;
+			font-size: 20px;
+			font-weight: 300;
+			line-height: 1.4;
+			text-align: left;
+		}
+	}
+}
+
+.payment-block{
+	background-color: white;
+	// border: 1px solid darken($cream, 10%);
+	border-radius: 5px;
+	margin: 30px auto;
+	padding: 30px;
+	p{
+		font-size: 18px;
+	}
+	h2.payment-label{
+		float: left;
+	}
+	.choices-holder{
+		clear: both;
+		width: 50%;
+		float: left;
+		.total{
+			font-size: 24px;
+			font-weight: bold;
+		}
+	}
+	.data-holder{
+		width: 50%;
+		float: left;
+		p.margin{
+			margin-bottom: 30px;
+		}
+		p.total{
+			font-size: 24px;
+			font-weight: bold
+		}
+	}
+}
+
+.button-holder{
+	button.stripe-button-el{
+		margin: 25px 10px 0px 10px;
+		background-color: blue!important;
+		background-image: none;
+		width: 150px;
+		border-radius: 0px;
+	}
+}
+
+.paymentsubmit{
+	text-align: center;
+	input{
+		margin: 25px 10px 0px 10px;
+		background-color: red;
+		color: white;
+		height: 32px;
+		width: 150px;
+	}
+
+}
+
+.footer-wrapper2{
+	background-color: #bfbfbf;
+	text-align: center;
+	padding-bottom: 20px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	img{
+		max-width: 100%;
+		margin-top: 25px;
+	}
+	.horizontal-rule{
+		margin: 15px 0px 15px 35%;
+		height: 1px;
+		// background-color: $brown-md;
+		background-color: white;
+		width: 30%;
+	}
+	p{
+		color: $cream;
+	}
+	
+}

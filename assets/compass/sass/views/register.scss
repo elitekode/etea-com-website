@@ -1,0 +1,57 @@
+.register-wrapper{
+	padding-top: 100px;
+	// text-align: center;
+	padding-bottom: 136px;
+	background-color: $cream;
+	h1, p{
+		text-align: center;
+	}
+	.container form{
+		margin: auto;
+		width: 500px;
+		button{
+			margin-top: 30px;
+			margin-right: 5px;
+			margin-left: 5px;
+			height: 40px;
+			width: 120px;
+		}
+		.btn-register{
+			background-color: white;
+			color: #333;
+			text-transform: uppercase;
+			width: 120px;
+			height: 40px;
+		}
+		.btn-cancel{
+			background-color: #333;
+			color: white;
+			text-transform: uppercase;
+			width: 120px;
+			height: 40px;
+		}
+		.form-group label{
+			text-align: left;
+		}
+	}
+	.button-holder{
+		text-align: center;
+		padding-bottom: 50px;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	.register-wrapper{
+		.container form{
+			width: 80%;
+			margin: auto;
+			.form-group input{
+				height: 60px;	
+			}
+			.btn-register, .btn-cancel{
+				width: 150px;
+				height: 80px;
+			}
+		}
+	}
+}

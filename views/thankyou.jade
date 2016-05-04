@@ -1,0 +1,35 @@
+extends layout
+
+block content
+
+    .navigation-bar
+        .navigation-bar-left
+            a(href='/')
+                img.wide(src='./images/logo1.png')
+            a(href='/')
+                img.narrow(src='./images/logo1.png')
+        .navigation-bar-right
+            if (!username)
+                a(href="/login") 
+                    button.btn.btn-green(type="submit") log in
+                a(href="/register")
+                    button.btn.btn-white(type="submit") sign up
+                //- a(href="/register")    
+                //-     button.btn.btn-primary(type="submit") Register
+            if (username)
+                p Welcome back, 
+                    a(href="/account") #{username}! &nbsp 
+                        span.glyphicon.glyphicon-edit(ariahidden="true")
+                a(href="/logout") 
+                    button.btn.btn-danger(type="submit") Logout
+    #thankyou.container
+        #thankyou-wrapper
+            img(src="../images/happyface.png")
+            #thankyou-header 
+                h1 Thank you for your order!
+            p We will e-mail you at #{emailaddress} when your coffee has shipped.
+        extends footer
+    .footer-wrapper2
+        img.narrow(src="../images/logo1.png")
+        .horizontal-rule
+        p &copy2016 Kochan Desai

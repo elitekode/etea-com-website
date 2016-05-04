@@ -1,0 +1,51 @@
+extends layout
+
+block content
+
+    .navigation-bar
+        .navigation-bar-left
+            a(href='/')
+                img.wide(src='./images/coolbeansLogo.png')
+            a(href='/')
+                img.narrow(src='./images/coffeeLogoStacked.png')
+        .navigation-bar-right
+            if (!username)
+                a(href="/login") 
+                    button.btn.btn-green(type="submit") log in
+                a(href="/register")
+                    button.btn.btn-white(type="submit") sign up
+                //- a(href="/register")    
+                //-     button.btn.btn-primary(type="submit") Register
+            if (username)
+                p Welcome back, 
+                    a(href="/account") #{username}! &nbsp 
+                        span.glyphicon.glyphicon-edit(ariahidden="true")
+                a(href="/logout") 
+                    button.btn.btn-danger(type="submit") Logout
+    .navigation-bar-small
+            .icon-holder
+                a(href="/")
+                    .one
+                    .icons 1. Home
+                a(href="/choices")
+                    .two
+                    .icons 2. Options
+                a(href="/shipping")
+                    .three
+                    .icons 3. Delivery
+                a(href="/payment")
+                    .four
+                    .icons 4. Payment
+
+
+    #cancellation.container
+        #cancellation-wrapper
+            img(src="../images/sadface.ico")
+            #cancellation-header 
+                h1 We are sorry we have lost you as a customer!
+            h4 We hope we can earn your business again in the future
+
+    .footer-wrapper2
+        img(src="../images/coffeeLogoStacked.png")
+        .horizontal-rule
+        p &copy2016 Kochan Desai
