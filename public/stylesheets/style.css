@@ -599,7 +599,7 @@ html, body {
 
 /* line 13, ../../assets/compass/sass/views/home.scss */
 .navigation-bar {
-  height: 130px;
+  height: 100px;
   background-color: #284741;
   position: fixed;
   top: 0;

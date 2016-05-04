@@ -1,28 +1,26 @@
-# Coffee Shop
+# TEa Shop
 E-commerce site for coffee shop powered by Express that allows you to subscribe for a coffee delivering service.  
 
-## Summary 
-Express app created and styled e-commerce website from wireframes and images assets provided.  Front-end developed using Jade & Sass.  Routes are handled through Node.  Payment methods are handled using Stripe, and Passport handles security.  
-
-![](https://github.com/wkwyatt/ecommerce-coffee-site/blob/gh-readme/public/images/home_ss.png)
-![](https://github.com/wkwyatt/ecommerce-coffee-site/blob/gh-readme/public/images/order_ss.png)
-![](https://github.com/wkwyatt/ecommerce-coffee-site/blob/gh-readme/public/images/pay_ss.png)
-
-## Demo
-[Live Demo](https://wills-coffee.herokuapp.com/)
 
 ## NPM Installs
 Be sure to run npm installs including the initial install to load the package.json files
 
-```linux
+Ubunu/linu
 $ npm install 
-$ npm install mongoose --save
-$ npm install nodemailer --save
-$ npm install passport --save
-$ npm install passport-local --save
-$ npm install passport-local-mongoose --save
-$ npm install stripe --save
-```
+
+Email config:
+
+enter email and password for node mail confirmation system
+
+compass watch compass 
+
+Password: Info
+
+Passport takes 3 parameters to confirm its middleware. 
+its uses bcrypt, it also notifes us of a bad passsword, no user, found
+
+
+
 
 ## Features
 * Sign up as a new user / Login
@@ -31,11 +29,20 @@ $ npm install stripe --save
 * Payment modal using Stripe
 * Implemented passport strategies to manage security and session data
 * Applied Mongoose models to collect data from MongoDB
+* high security for product service 
+*system functions on different front and backend express routes the system while maintaining javascript invisibility
 
 ## Upcoming Features
-* Manage multiple orders from one user
+* purchase various tea products
+* provide insight to the steeping of tea
+* provide differen "packaging" types 
+* add bootstrap ui. 
+
+
 
 ## Bugs 
-* Get Started button routing to wrong login page
+* Nav Bar height
+*more flow with them representation 
+
 
 

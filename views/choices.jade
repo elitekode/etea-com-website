@@ -5,9 +5,9 @@ block content
     .navigation-bar
         .navigation-bar-left
             a(href='/')
-                img.wide(src='./images/coolbeansLogo.png')
+                img.wide(src='./images/logo1.png')
             a(href='/')
-                img.narrow(src='./images/coffeeLogoStacked.png')
+                img.narrow(src='./images/logo1.png')
         .navigation-bar-right
             if (!username)
                 a(href="/login")
@@ -64,7 +64,9 @@ block content
                                 p.col-xs-6 $7.00
                             .row
                                 form(name="choices-form", action="/choices", method="post")
-                                    p.col-xs-6.align-right Grind Type:
+                                    p.col-xs-6.align-right Packaging Style:
+                                    // create 3 different times of packaging styles, tea bucket as a gift, single bag tea, or loose leaf waiting.
+                                    // options to purchase tea bags or tea pot
                                     .select-box.col-xs-6
                                         select(id="grind", name="grind", class="form-control", required)
                                             option(value="blank", selected=(grind==""))
@@ -98,7 +100,8 @@ block content
                                 p.col-xs-6 $18.00 
                             .row
                                 form(name="choices-form", action="/choices", method="post")
-                                    p.col-xs-6.align-right Grind Type:
+                                    p.col-xs-6.align-right Packaging Style:
+                                    // dont forget to add above....
                                     .select-box.col-xs-6
                                         select(id="grind", name="grind", class="form-control", required)
                                             option(value="blank", selected=(grind==""))
@@ -125,7 +128,7 @@ block content
                         .col-sm-6
                             h2.choices-label 1. Frequency
                             .choices-lower-text-wrapper 
-                                .choices-lower-text How often would you like us to send you your coffee?
+                                .choices-lower-text How often would you like us to send you your Tea?
                                 select.width(id="frequency", name="frequency", class="form-control",selected="#{frequency}", required)
                                     option(value="blank" selected=(frequency==" "))
                                     option(value="weekly" selected=(frequency == "weekly")) Weekly
@@ -152,9 +155,9 @@ block content
                         .choices-image.col-sm-6
                             img(src='../images/beans.png')
                         .col-sm-6
-                            h2.choices-label 3. Grind Type
+                            h2.choices-label 3. Handling & Packaging
                             .choices-lower-text-wrapper 
-                                .choices-lower-text How do you like your grinds?
+                                .choices-lower-text How would you like your tea Delivered?
                                 select.width(id="grind", name="grind", class="form-control", required)
                                     option(value="blank", selected=(grind==""))
                                     option(value="extraCoarse" selected=(grind ==' extraCoarse')) Extra Coarse

@@ -1,12 +1,12 @@
 /*
 Error: Undefined variable: "$green".
-        on line 15 of /Users/kochandesai/Desktop/codingbootcamp/ecommerce-coffee-site-master/assets/compass/sass/views/home.scss
+        on line 15 of /Users/kochandesai/Desktop/codingbootcamp/etea-com-website/assets/compass/sass/views/home.scss
 
 10: 
 11: }
 12: 
 13: .navigation-bar{
-14: 	height: 130px;
+14: 	height: 100px;
 15: 	background-color: $green;
 16: 	position: fixed;
 17: 	top: 0;
@@ -15,7 +15,7 @@ Error: Undefined variable: "$green".
 20: 	font-family:'Raleway', sans-serif;
 
 Backtrace:
-/Users/kochandesai/Desktop/codingbootcamp/ecommerce-coffee-site-master/assets/compass/sass/views/home.scss:15
+/Users/kochandesai/Desktop/codingbootcamp/etea-com-website/assets/compass/sass/views/home.scss:15
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/script/tree/node.rb:50:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
@@ -67,4 +67,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$green\".\A         on line 15 of /Users/kochandesai/Desktop/codingbootcamp/ecommerce-coffee-site-master/assets/compass/sass/views/home.scss\A \A 10: \A 11: }\A 12: \A 13: .navigation-bar{\A 14: 	height: 130px;\A 15: 	background-color: $green;\A 16: 	position: fixed;\A 17: 	top: 0;\A 18: 	z-index: 100;\A 19: 	width: 100%;\A 20: 	font-family:'Raleway', sans-serif;"; }
+  content: "Error: Undefined variable: \"$green\".\A         on line 15 of /Users/kochandesai/Desktop/codingbootcamp/etea-com-website/assets/compass/sass/views/home.scss\A \A 10: \A 11: }\A 12: \A 13: .navigation-bar{\A 14: 	height: 100px;\A 15: 	background-color: $green;\A 16: 	position: fixed;\A 17: 	top: 0;\A 18: 	z-index: 100;\A 19: 	width: 100%;\A 20: 	font-family:'Raleway', sans-serif;"; }
