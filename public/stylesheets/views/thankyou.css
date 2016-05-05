@@ -2,4 +2,4 @@
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$cream\".\A         on line 37 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/thankyou.scss\A \A 32: 		// background-color: $brown-md;\A 33: 		background-color: white;\A 34: 		width: 30%;\A 35: 	}\A 36: 	p{\A 37: 		color: $cream;\A 38: 	}\A 39: 	\A 40: }"; }
+  content: "Error: Undefined variable: \"$cream\".\A         
