@@ -5,9 +5,9 @@ block content
     .navigation-bar
       .navigation-bar-left
             a(href='/')
-                img.wide(src='./images/coolbeansLogo.png')
+                img.wide(src='./images/logo1.png')
             a(href='/')
-                img.narrow(src='./images/coffeeLogoStacked.png')
+                img.narrow(src='./images/logo1.png')
       .navigation-bar-right
           if (!username)
             p
@@ -15,12 +15,12 @@ block content
             a(href='/login')
                   button.btn.need-account(type="submit") Login
           if (username)
-              p Welcome back, 
+              p Welcome back,
                   a(href="/account") #{username}!
-              a(href="/logout") 
+              a(href="/logout")
                   button.btn.btn-danger(type="submit") Logout
 
-    
+
     .register-wrapper
       .container
          h1 Registration
@@ -48,4 +48,3 @@ block content
              &nbsp;
              a(href='/')
                button.btn.btn-cancel(type="button") nevermind
-

@@ -6,17 +6,17 @@ E-commerce site for coffee shop powered by Express that allows you to subscribe 
 Be sure to run npm installs including the initial install to load the package.json files
 
 Ubunu/linu
-$ npm install 
+$ npm install
 
 Email config:
 
 enter email and password for node mail confirmation system
 
-compass watch compass 
+compass watch compass
 
 Password: Info
 
-Passport takes 3 parameters to confirm its middleware. 
+Passport takes 3 parameters to confirm its middleware.
 its uses bcrypt, it also notifes us of a bad passsword, no user, found
 
 
@@ -29,20 +29,19 @@ its uses bcrypt, it also notifes us of a bad passsword, no user, found
 * Payment modal using Stripe
 * Implemented passport strategies to manage security and session data
 * Applied Mongoose models to collect data from MongoDB
-* high security for product service 
+* high security for product service
 *system functions on different front and backend express routes the system while maintaining javascript invisibility
 
 ## Upcoming Features
 * purchase various tea products
 * provide insight to the steeping of tea
-* provide differen "packaging" types 
-* add bootstrap ui. 
+* provide differen "packaging" types
+* add bootstrap ui.
 
 
 
-## Bugs 
+## Bugs
 * Nav Bar height
-*more flow with them representation 
+*more flow with them representation
 
-
-
+Jwt Integration similar to tekrect

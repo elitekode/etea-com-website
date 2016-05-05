@@ -5,19 +5,19 @@ block content
  .navigation-bar
     .navigation-bar-left
             a(href='/')
-                img.wide(src='./images/coolbeansLogo.png')
+                img.wide(src='./images/logo1.png')
             a(href='/')
-                img.narrow(src='./images/coffeeLogoStacked.png')
+                img.narrow(src='./images/logo1.png')
     .navigation-bar-right
         if (!username)
             a(href="/login")
                 button.btn.btn-success(type="submit") Login
-            a(href="/register")    
+            a(href="/register")
                 button.btn.btn-primary(type="submit") Register
         if (username)
-            p Welcome back, 
+            p Welcome back,
                 a(href="/account") #{username}!
-            a(href="/logout") 
+            a(href="/logout")
                 button.btn.btn-danger(type="submit") Logout
   .navigation-bar-small
         .icon-holder
@@ -35,14 +35,14 @@ block content
                 .icons.active 4. Payment
   #payment.container
      #payment-wrapper
-        #payment-header Payment 
+        #payment-header Payment
         #payment-sub-header Order summary below
         .payment-block.col-xs-12
             h2.payment-label Choices
             .choices-holder
                 p Grind
                 p Frequency of Delivery
-                p Tea In Pounds 
+                p Tea In Pounds
             .data-holder
                 p #{grind}
                 p #{frequency}
@@ -75,10 +75,10 @@ block content
                 p.total $#{totalCharge}
         .button-holder.col-xs-12
           form.paymentsubmit(name="payment", action="/payment", method="post")
-            script.stripe-button(src="https://checkout.stripe.com/checkout.js", data-key=(key), data-image="./images/coffee-chair.jpg", data-name="Tiedemann Roasters", data-description=((grind)+" Coffee"), data-amount=(totalCharge*100), data-locale="auto")  
+            script.stripe-button(src="https://checkout.stripe.com/checkout.js", data-key=(key), data-image="./images/coffee-chair.jpg", data-name="Tiedemann Roasters", data-description=((grind)+" Coffee"), data-amount=(totalCharge*100), data-locale="auto")
             a(href="/")
               input(type="button" value="Cancel Order")
   .footer-wrapper2
     img(src="../images/logo1.png")
     .horizontal-rule
-    p &copy2016 Kochan Desai
+  p &copy2016 Kochan Desai

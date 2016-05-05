@@ -5,20 +5,20 @@ block content
  .navigation-bar
     .navigation-bar-left
             a(href='/')
-                img.wide(src='./images/coolbeansLogo.png')
+                img.wide(src='./images/logo1.png')
             a(href='/')
-                img.narrow(src='./images/coffeeLogoStacked.png')
+                img.narrow(src='./images/logo1.png')
     .navigation-bar-right
         if (!username)
             a(href="/login")
                 button.btn.btn-success(type="submit") Login
-            a(href="/register")    
+            a(href="/register")
                 button.btn.btn-primary(type="submit") Register
         if (username)
-            p Welcome back, 
+            p Welcome back,
                 a(href="/account") #{username}! &nbsp
                     span.glyphicon.glyphicon-edit(ariahidden="true")
-            a(href="/logout") 
+            a(href="/logout")
                 button.btn.btn-danger(type="submit") Logout
   .navigation-bar-small
         .icon-holder
@@ -44,7 +44,7 @@ block content
           .row
             form.col-sm-8(name="shipping-form", action="/shipping", method="post")
                 .shipping-block.col-sm-12
-                    h2.shipping-label Address        
+                    h2.shipping-label Address
                     .form-group
                         label(for="fullName") Full Name
                         input.form-control(type="text", id="fullName", name="fullName", placeholder="John Doe", value=(fullName), required)
@@ -61,7 +61,7 @@ block content
                         input.form-control(type="text", id="city" name="city", placeholder="YourCity", value=(city), required)
                         p.help-block City, town, etc.
                     label(for="state") State
-                    .form-group               
+                    .form-group
                         select.form-control(id="state", name="state", style="width:100px")
                             option(value='AL' selected=(state=='AL')) Alabama
                             option(value='AK' selected=(state=='AK')) Alaska
