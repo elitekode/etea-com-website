@@ -46,7 +46,7 @@ router.post('/register', function(req,res,next){
 			console.log(req.session.emailaddress);
 			res.redirect('/choices')
 		});
-		
+
 	});
 });
 
@@ -94,8 +94,8 @@ router.post('/login', function(req, res, next){
 			// return res.render('choices',{username: req.session.username, quarterPounds: req.session.quarterPounds, grind: req.session.grind, frequency: req.session.frequency});
 			return res.redirect('/choices');
 		}
-		
-	})(req,res,next);	
+
+	})(req,res,next);
 });
 
 
@@ -121,7 +121,7 @@ router.get('/choices', function(req, res, next){
 				var currQuarterPounds = doc.quarterPounds ? doc.quarterPounds : undefined;
 				res.render('choices', {username: req.session.username, grind: currGrind, frequency: currFrequency, quarterPounds: currQuarterPounds, accessLevel: req.session.accessLevel});
 		});
-		
+
 	}else{
 		res.redirect('/');
 	}
@@ -141,7 +141,7 @@ router.post('/choices', function(req, res, next){
 		Account.findOneAndUpdate(
 			{ username: req.session.username },
 			{ grind: newGrind, frequency: newFrequency, quarterPounds: newPounds, choices: newChoice },
-			{ upsert: true },		
+			{ upsert: true },
 			function(err,account){
 				if (err) {
 					res.send("There was an error saving your preferences" + err);
@@ -195,7 +195,7 @@ router.post('/shipping', function(req, res, next){
 		Account.findOneAndUpdate(
 			{ username: req.session.username },
 			{ fullName: newFullName, address1: newAddress1, address2: newAddress2, city: newCity, state: newState, zipCode: newZipCode, deliveryDate: newDeliveryDate, shipping: newShipping},
-			{ upsert: true },		
+			{ upsert: true },
 			function(err,account){
 				if (err) {
 					res.send("There was an error saving your preferences" + err);
@@ -236,11 +236,11 @@ router.get('/payment', function(req, res, next){
 					req.session.shipping = true;
 					res.render('shipping', {username: req.session.username, shipping: req.session.shipping})
 				}else{
-					res.render('payment', {username: req.session.username, grind: currGrind, 
-						frequency: currFrequency, quarterPounds: currQuarterPounds, 
-						fullName: currFullName, address1: currAddress1, address2: currAddress2, 
-						city: currCity, state: currState, zipCode: currZipCode, 
-						deliveryDate: currDeliveryDate, charge: currCharge, totalCharge : totalCharge, key: "pk_test_KzKuz4A1dyTwp3wblI0PyCq8" });
+					res.render('payment', {username: req.session.username, grind: currGrind,
+						frequency: currFrequency, quarterPounds: currQuarterPounds,
+						fullName: currFullName, address1: currAddress1, address2: currAddress2,
+						city: currCity, state: currState, zipCode: currZipCode,
+						deliveryDate: currDeliveryDate, charge: currCharge, totalCharge : totalCharge, key: "pk_test_AvTT3JfJQM7vtktFhM24FqVq" });
 				}
 			});
 	};
@@ -248,7 +248,7 @@ router.get('/payment', function(req, res, next){
 
 router.post('/payment', function(req, res, next){
 	var stripe = require("stripe")(
-	  "sk_test_NWYwCkzv8zQo8EYerx33QyXW"
+	  "sk_test_o8Ocawgx8VI2EAFv9f4BQBcJ"
 	);
 
 	stripe.charges.create({
@@ -282,10 +282,10 @@ router.get('/account', function(req, res, next){
 				var currState = doc.state ? doc.state : "N/A";
 				var currZipCode = doc.zipCode ? doc.zipCode : "N/A";
 				var currDeliveryDate = doc.deliveryDate ? doc.deliveryDate : "N/A";
-				res.render('account', {username: req.session.username, 
-					grind: currGrind, frequency: currFrequency, quarterPounds: currQuarterPounds, 
-					fullName: currFullName, address1: currAddress1, address2: currAddress2, 
-					city: currCity, state: currState, zipCode: currZipCode, 
+				res.render('account', {username: req.session.username,
+					grind: currGrind, frequency: currFrequency, quarterPounds: currQuarterPounds,
+					fullName: currFullName, address1: currAddress1, address2: currAddress2,
+					city: currCity, state: currState, zipCode: currZipCode,
 					deliveryDate : currDeliveryDate});
 		});
 	}else{
@@ -299,7 +299,7 @@ router.post('/cancellation', function(req, res, next){
 			{username: req.session.username},
 			{},
 			function(err,user){
-				
+
 			}
 		);
 		req.session.destroy();
@@ -317,7 +317,7 @@ router.get('/email', function(req, res, next){
 	var transporter = nodemailer.createTransport({
 		service: 'Gmail',
 		auth: {
-			// put email for your admin here 
+			// put email for your admin here
 			user: vars.email,
 			pass: vars.password
 		}
