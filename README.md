@@ -45,3 +45,7 @@ its uses bcrypt, it also notifes us of a bad passsword, no user, found
 *more flow with them representation
 
 Jwt Integration similar to tekrect
+
+routing configured so that tea
+
+upesert = true if tits there then we will send it forward
