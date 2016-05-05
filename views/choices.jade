@@ -12,13 +12,13 @@ block content
             if (!username)
                 a(href="/login")
                     button.btn.btn-success(type="submit") Login
-                a(href="/register")    
+                a(href="/register")
                     button.btn.btn-primary(type="submit") Register
             if (username)
-                p Welcome back, 
+                p Welcome back,
                     a(href="/account") #{username}! &nbsp
                         span.glyphicon.glyphicon-edit(ariahidden="true")
-                a(href="/logout") 
+                a(href="/logout")
                     button.btn.btn-danger(type="submit") Logout
                 if(accessLevel)
                     a.btn.btn-warning(href="/admin") Admin
@@ -54,13 +54,13 @@ block content
                         img(src="../images/solodrinker.jpg")
                         .summary
                             .row
-                                p.col-xs-6.align-right Cups per week: 
+                                p.col-xs-6.align-right Cups per week:
                                 p.col-xs-6 14
                             .row
-                                p.col-xs-6.align-right Price per cup: 
+                                p.col-xs-6.align-right Price per cup:
                                 p.col-xs-6 $.50
                             .row
-                                p.col-xs-6.align-right Weekly total: 
+                                p.col-xs-6.align-right Weekly total:
                                 p.col-xs-6 $7.00
                             .row
                                 form(name="choices-form", action="/choices", method="post")
@@ -74,7 +74,7 @@ block content
                                                 option(value="coarse" selected=(grind == 'coarse')) Coarse
                                                 option(value="mediumCoarse" selected=(grind == 'mediumCoarse')) Medium Coarse
                                                 option(value="fine" selected=(grind == 'fine')) Fine
-                                                option(value="veryFine" selected=(grind == 'veryFine')) VeryFine 
+                                                option(value="veryFine" selected=(grind == 'veryFine')) VeryFine
                                     input(type="hidden", name="frequency", value="weekly")
                                     input(type="hidden", name="quarterPounds", value="0.35")
                                     .row
@@ -90,14 +90,14 @@ block content
                         img(src="../images/coffeedrinkers.jpg")
                         .summary
                             .row
-                                p.col-xs-6.align-right Cups per week: 
+                                p.col-xs-6.align-right Cups per week:
                                 p.col-xs-6 40
                             .row
-                                p.col-xs-6.align-right Price per cup: 
+                                p.col-xs-6.align-right Price per cup:
                                 p.col-xs-6 $.45
                             .row
-                                p.col-xs-6.align-right Weekly total: 
-                                p.col-xs-6 $18.00 
+                                p.col-xs-6.align-right Weekly total:
+                                p.col-xs-6 $18.00
                             .row
                                 form(name="choices-form", action="/choices", method="post")
                                     p.col-xs-6.align-right Packaging Style:
@@ -109,7 +109,7 @@ block content
                                                 option(value="coarse" selected=(grind == 'coarse')) Coarse
                                                 option(value="mediumCoarse" selected=(grind == 'mediumCoarse')) Medium Coarse
                                                 option(value="fine" selected=(grind == 'fine')) Fine
-                                                option(value="veryFine" selected=(grind == 'veryFine')) VeryFine 
+                                                option(value="veryFine" selected=(grind == 'veryFine')) VeryFine
                                     input(type="hidden", name="frequency", value="weekly")
                                     input(type="hidden", name="quarterPounds", value="0.9")
                                     .row
@@ -127,7 +127,7 @@ block content
                             img(src='../images/calendar.png')
                         .col-sm-6
                             h2.choices-label 1. Frequency
-                            .choices-lower-text-wrapper 
+                            .choices-lower-text-wrapper
                                 .choices-lower-text How often would you like us to send you your Tea?
                                 select.width(id="frequency", name="frequency", class="form-control",selected="#{frequency}", required)
                                     option(value="blank" selected=(frequency==" "))
@@ -156,7 +156,7 @@ block content
                             img(src='../images/beans.png')
                         .col-sm-6
                             h2.choices-label 3. Handling & Packaging
-                            .choices-lower-text-wrapper 
+                            .choices-lower-text-wrapper
                                 .choices-lower-text How would you like your tea Delivered?
                                 select.width(id="grind", name="grind", class="form-control", required)
                                     option(value="blank", selected=(grind==""))
@@ -164,7 +164,7 @@ block content
                                     option(value="coarse" selected=(grind == 'coarse')) Coarse
                                     option(value="mediumCoarse" selected=(grind == 'mediumCoarse')) Medium Coarse
                                     option(value="fine" selected=(grind == 'fine')) Fine
-                                    option(value="veryFine" selected=(grind == 'veryFine')) VeryFine                                   
+                                    option(value="veryFine" selected=(grind == 'veryFine')) VeryFine
                                 .choices-help-text You can cancel anytime. You can skip anytime
                 .button-holder
                      button.btn.btn-submit(type="submit", name="submit") Submit

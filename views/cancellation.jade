@@ -5,22 +5,22 @@ block content
     .navigation-bar
         .navigation-bar-left
             a(href='/')
-                img.wide(src='./images/coolbeansLogo.png')
+                img.wide(src='./images/logo1.png')
             a(href='/')
-                img.narrow(src='./images/coffeeLogoStacked.png')
+                img.narrow(src='./images/logo1.png')
         .navigation-bar-right
             if (!username)
-                a(href="/login") 
+                a(href="/login")
                     button.btn.btn-green(type="submit") log in
                 a(href="/register")
                     button.btn.btn-white(type="submit") sign up
-                //- a(href="/register")    
+                //- a(href="/register")
                 //-     button.btn.btn-primary(type="submit") Register
             if (username)
-                p Welcome back, 
-                    a(href="/account") #{username}! &nbsp 
+                p Welcome back,
+                    a(href="/account") #{username}! &nbsp
                         span.glyphicon.glyphicon-edit(ariahidden="true")
-                a(href="/logout") 
+                a(href="/logout")
                     button.btn.btn-danger(type="submit") Logout
     .navigation-bar-small
             .icon-holder
@@ -41,11 +41,11 @@ block content
     #cancellation.container
         #cancellation-wrapper
             img(src="../images/sadface.ico")
-            #cancellation-header 
+            #cancellation-header
                 h1 We are sorry we have lost you as a customer!
             h4 We hope we can earn your business again in the future
 
     .footer-wrapper2
-        img(src="../images/coffeeLogoStacked.png")
+        img(src="../images/logo1.png")
         .horizontal-rule
         p &copy2016 Kochan Desai

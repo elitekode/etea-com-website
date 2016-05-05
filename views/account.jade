@@ -5,19 +5,19 @@ block content
  .navigation-bar
     .navigation-bar-left
             a(href='/')
-                img.wide(src='./images/coolbeansLogo.png')
+                img.wide(src='./images/logo1.png')
             a(href='/')
-                img.narrow(src='./images/coffeeLogoStacked.png')
+                img.narrow(src='./images/logo1.png')
     .navigation-bar-right
         if (!username)
             a(href="/login")
                 button.btn.btn-success(type="submit") Login
-            a(href="/register")    
+            a(href="/register")
                 button.btn.btn-primary(type="submit") Register
         if (username)
-            p Welcome, 
+            p Welcome,
                 a(href="/account") #{username}!
-            a(href="/logout") 
+            a(href="/logout")
                 button.btn.btn-danger(type="submit") Logout
   .navigation-bar-small
         .icon-holder
@@ -44,7 +44,7 @@ block content
             .choices-holder
                 p Grind
                 p Frequency of Delivery
-                p Tea, In Pounds 
+                p Tea, In Pounds
             .data-holder
                 p #{grind}
                 p #{frequency}
@@ -69,7 +69,7 @@ block content
                 p #{zipCode}
                 p #{deliveryDate}
 
-    .button-holder.col-xs-12           
+    .button-holder.col-xs-12
         //- input.btn.btn-danger.btn-lg(type="submit", name="submit" value="Cancel Account")
         button.btn.btn-info(type="button", data-toggle="modal", data-target="#myModal") Delete Account
         #myModal.modal.fade(role="dialog")
