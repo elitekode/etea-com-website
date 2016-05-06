@@ -8,36 +8,36 @@ block content
                 img.narrow(src='./images/logo1.png')
         .navigation-bar-right
             if (!username)
-                a(href="/login") 
+                a(href="/login")
                     button.btn.btn-green(type="submit") log in
                 a(href="/register")
                     button.btn.btn-white(type="submit") sign up
             if (username)
-                p Welcome back, 
-                    a(href="/account") #{username}! &nbsp 
+                p Welcome back,
+                    a(href="/account") #{username}! &nbsp
                         span.glyphicon.glyphicon-edit(ariahidden="true")
-                a(href="/logout") 
+                a(href="/logout")
                     button.btn.btn-danger(type="submit") Logout
     if (username)
-        .navigation-bar-small
+        .navigation-bar-small 
             .icon-holder
-                a(href="/")
+                a(href="/").col3
                     .one.active
                     .icons.active 1. Home
-                a(href="/choices")
+                a(href="/choices").col3
                     .two
                     .icons 2. Options
-                a(href="/shipping")
+                a(href="/shipping").col3
                     .three
                     .icons 3. Delivery
-                a(href="/payment")
+                a(href="/payment").col3
                     .four
                     .icons 4. Payment
     if (username)
         .coffee-cup-background2
             .coffee-cup-text
               h1 A better way to get Tea
-              h4 Whether its, Green or Black, 
+              h4 Whether its, Green or Black,
               h4 Rare and Artisan Teas will be delivered
               h4 weekly to your door.
     else
@@ -46,20 +46,20 @@ block content
                h1 A better way to sip
                h4 Original Tea
                h4 Research Graded and Delivered to Your Door
-    .how-it-works 
+    .how-it-works
         p How It Works
     .arrow-holder
         .arrow-down
     .coffee-bags
         p.title 1. Each year, we look for rare and unusual, single-origin teas that are not commonly found outside China and increasingly, are becoming harder to find within that marketplace.
-        p Each leaf is from a single-origin teas 
+        p Each leaf is from a single-origin teas
         p Each tea is not commonly found outside of China
-        p We ensure our product is sourced 
+        p We ensure our product is sourced
     .how-it-works2
         .bag-arrow
             img(src="../images/CoffeeBags_corner.png")
         .rotated-picture
-            img(src="../images/grower.jpg")
+            img(src="../images/2.jpg")
         .coffee-grower
             p.title 2. We pick up the tea
             p.text We place the tea in silk bags
@@ -68,17 +68,17 @@ block content
     .arrow-holder
         .arrow-down
     .how-it-works3
+
         .coffee-cup
-            p.title 3. You drink the tea
+            p.title 3. Rare and Artisan Tea at your door
             p.text The tea hits your lips
             p.text You swallow the coffee
             p.text You want to buy more of the coffee
-        .coffee-cup-image
-            img(src="../images/cupSteam.jpg")
+
     .arrow-holder2
         .arrow-down2
     .get-started-section
-        a(href="/register") 
+        a(href="/register")
             button.get-started(type="button") Get Started
     .learn-more
         h3 Want to know more about us?
