@@ -10,24 +10,26 @@ block content
                 img.narrow(src='./images/logo1.png')
         .navigation-bar-right
             if (!username)
-                a(href="/login") 
+                a(href="/login")
                     button.btn.btn-green(type="submit") log in
                 a(href="/register")
                     button.btn.btn-white(type="submit") sign up
-                //- a(href="/register")    
+                //- a(href="/register")
                 //-     button.btn.btn-primary(type="submit") Register
             if (username)
-                p Welcome back, 
-                    a(href="/account") #{username}! &nbsp 
+                p Welcome back,
+                    a(href="/account") #{username}! &nbsp
                         span.glyphicon.glyphicon-edit(ariahidden="true")
-                a(href="/logout") 
+                a(href="/logout")
                     button.btn.btn-danger(type="submit") Logout
     .our-history-wrapper
+
+        img(src='./images/11.jpg')
         h3 A Little Bit (or a lot) About Us
-        p Each year, we look for rare and unusual, single-origin teas that are not commonly found outside China and increasingly, are becoming harder to find within that marketplace. Traditionally, the highest grade teas have always had a pre-destination and were difficult to source. The privatization of the tea companies changed this to a degree. At the same time, the domestic tea market has strengthened markedly in the last decade. This has increased competition for these small lot teas. 
+        p Each year, we look for rare and unusual, single-origin teas that are not commonly found outside China and increasingly, are becoming harder to find within that marketplace. Traditionally, the highest grade teas have always had a pre-destination and were difficult to source. The privatization of the tea companies changed this to a degree. At the same time, the domestic tea market has strengthened markedly in the last decade. This has increased competition for these small lot teas.
         p This year we set out to find more interesting, unusual teas for our customers. As a result, we found teas that often remain local, yet in some way characterize the craft and artistry of Chinese teas. Each of the teas within this group has a story and we think offers a wonderful taste. Each is in our warehouse in limited quantity.
         p It is with a deep sense of responsibility that we source our product and great care is taken in how we deliver it to you, our most valued customer.  Even though our coffee beans come from the same fields as much cheaper coffee, it is our mission to make you think it is far better than the competition. We accomplish this with sophisticated packaging and overpaying on designer labels, which gives you the conviction to pull out your wallet and purchase with great pride.
     .get-started-section
-        a(href="/register") 
+        a(href="/register")
                 button.get-started(type="button") Get Started
 extends footer
