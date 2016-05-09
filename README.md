@@ -31,11 +31,12 @@ its uses bcrypt, it also notifes us of a bad passsword, no user, found
 * Applied Mongoose models to collect data from MongoDB
 * high security for product service
 *system functions on different front and backend express routes the system while maintaining javascript invisibility
-*stripe test succesfull
+*stripe test successful
+
 ## Upcoming Features
 * purchase various tea products
 * provide insight to the steeping of tea
-* provide differen "packaging" types
+* provide different "packaging" types
 * add bootstrap ui.
 *add collapsable navigation-ba
 *added
