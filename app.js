@@ -1,3 +1,4 @@
+var newrelic = require('newrelic')
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -42,9 +43,9 @@ passport.deserializeUser(Account.deserializeUser());
 
 //mongoose will be connected as soon as the app initializes
 var mongoUrl =
-  process.env.MONGOLAB_URI ||
+  process.env.MONGOLAB_URI || 'mongodb://heroku_bdf6l1f0:4bput3jq6mfmhqps2trqbrfmrr@ds017852.mlab.com:17852/heroku_bdf6l1f0';
   process.env.MONGOHQ_URL ||
-  'mongodb://localhost:27017/coffee';
+
 mongoose.connect(mongoUrl);
 // mongoose.connect('mongodb://localhost:27017/coffee');
 
